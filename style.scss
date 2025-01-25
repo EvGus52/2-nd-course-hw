@@ -26,6 +26,7 @@ a {
 }
 
 .header {
+
     background-image: url(images/bgheader.jpeg);
     background-repeat: no-repeat;
     background-position: right;
@@ -37,6 +38,10 @@ a {
     }
 
     &header__text {
-
+        color: rgb(32, 32, 39);
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 32px;
+        text-align: left;
     }    
 }
