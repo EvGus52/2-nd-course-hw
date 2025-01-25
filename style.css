@@ -23,6 +23,7 @@ a {
 }
 
 .header {
+  height: 710px;
   background-image: url(images/bgheader.jpeg);
   background-repeat: no-repeat;
   background-position: right;
@@ -31,6 +32,11 @@ a {
 }
 .headerheader__title {
   max-width: 769px;
+  color: rgb(32, 32, 39);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 78px;
+  text-align: left;
 }
 .headerheader__text {
   color: rgb(32, 32, 39);
