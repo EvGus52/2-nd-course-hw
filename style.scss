@@ -1,11 +1,19 @@
+$color-text:rgb(32, 32, 39);
+$alt-color-text: rgb(255, 255, 255);
+$background-color: rgb(188, 236, 48);
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    font-size: 16px;
+    }
 
 body {
     font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -17,19 +25,18 @@ a {
     padding-right: calc(50% - 600px);
 }
 
-.top {
-    position: relative;
-    height: 800px;
+.header {
     background-image: url(images/bgheader.jpeg);
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover;
-}
-
-.header {
     padding-top: 196px;
 
-    &__title {
-    max-width: 769px;
+    &header__title {
+        max-width: 769px;
     }
+
+    &header__text {
+
+    }    
 }
