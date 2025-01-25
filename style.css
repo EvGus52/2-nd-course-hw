@@ -15,6 +15,7 @@ body {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .center {
@@ -30,18 +31,33 @@ a {
   background-size: cover;
   padding-top: 196px;
 }
-.headerheader__title {
+.header__title {
   max-width: 769px;
   color: rgb(32, 32, 39);
   font-size: 4rem;
   font-weight: 700;
   line-height: 78px;
   text-align: left;
+  margin-bottom: 24px;
 }
-.headerheader__text {
+.header__text {
   color: rgb(32, 32, 39);
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 32px;
   text-align: left;
+  margin-bottom: 48px;
+}
+.header__link {
+  display: inline-block;
+  width: 247px;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 141.69%;
+  text-align: center;
+  border: 1px solid rgb(32, 32, 39);
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  padding: 16px 28px;
 }/*# sourceMappingURL=style.css.map */

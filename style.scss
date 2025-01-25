@@ -19,6 +19,7 @@ body {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 .center {
@@ -34,20 +35,61 @@ a {
     background-size: cover;
     padding-top: 196px;
 
-    &header__title {
+    &__title {
         max-width: 769px;
         color: $color-text;
-        font-size: 288px;
+        font-size: 4rem;
         font-weight: 700;
         line-height: 78px;
         text-align: left;
+        margin-bottom: 24px;
     }
 
-    &header__text {
+    &__text {
         color: $color-text;
         font-size: 1.5rem;
         font-weight: 400;
         line-height: 32px;
         text-align: left;
+        margin-bottom: 48px;
+    }
+
+    &__link {
+        display: inline-block;
+        width: 247px;
+        color: $alt-color-text;
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 141.69%;
+        text-align: center;
+        border: 1px solid rgb(32, 32, 39);
+        border-radius: 60px;
+        background: rgb(32, 32, 39);
+        padding: 16px 28px;
+        
     }
 }
+
+// .scroll-bar {
+//     width: 3220px;
+//     height: 90px;
+//     display: flex;
+//     background-color: $background-color;
+    
+   
+//     &__content {
+//     display: flex;
+//     gap: 51px;
+//     align-items: center;
+//    }
+
+//    &__heading {
+//     color: $color-text;
+//     font-size: 30px;
+//     font-weight: 700;
+//     line-height: 110%;
+//     text-align: left;
+//     text-transform: uppercase;
+
+//    }
+// } здесь добавиться JS
