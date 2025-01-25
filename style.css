@@ -23,6 +23,20 @@ a {
   padding-right: calc(50% - 600px);
 }
 
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 78px;
+  text-align: left;
+}
+
+.text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+}
+
 .header {
   height: 710px;
   background-image: url(images/bgheader.jpeg);
@@ -34,18 +48,10 @@ a {
 .header__title {
   max-width: 769px;
   color: rgb(32, 32, 39);
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 78px;
-  text-align: left;
   margin-bottom: 24px;
 }
 .header__text {
   color: rgb(32, 32, 39);
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 32px;
-  text-align: left;
   margin-bottom: 48px;
 }
 .header__link {
@@ -60,4 +66,94 @@ a {
   border-radius: 60px;
   background: rgb(32, 32, 39);
   padding: 16px 28px;
+}
+
+.scroll-bar {
+  width: 3220px;
+  background-color: rgb(188, 236, 48);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.scroll-bar__content {
+  display: flex;
+  gap: 51px;
+  align-items: center;
+  overflow-x: hidden;
+}
+.scroll-bar__heading {
+  color: rgb(32, 32, 39);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 110%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.about-games {
+  padding-top: 94px;
+  background-color: rgb(32, 32, 39);
+  padding-bottom: 50px;
+}
+.about-games__title {
+  color: rgb(255, 255, 255);
+  margin-bottom: 24px;
+}
+.about-games__text {
+  color: rgb(255, 255, 255);
+  margin-bottom: 72px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+}
+.about__link {
+  height: 100%;
+  width: 100%;
+}
+.about__item {
+  grid-column: span 4;
+  border-radius: 30px;
+  box-shadow: 0px 12px 42px -8px rgba(0, 0, 0, 0.13);
+  background: rgb(255, 255, 255);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.about__item:hover {
+  transform: translateY(16px);
+}
+.about__img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+.about__info {
+  display: flex;
+  gap: 26px;
+  flex-direction: column;
+  padding: 32px;
+}
+.about__text {
+  color: rgb(32, 32, 39);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 108px;
+  height: 36px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 110%;
+  text-align: left;
+  border-radius: 52px;
+  background: rgb(247, 247, 247);
+}
+.about__heading {
+  color: rgb(32, 32, 39);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 39px;
+  text-align: left;
 }/*# sourceMappingURL=style.css.map */

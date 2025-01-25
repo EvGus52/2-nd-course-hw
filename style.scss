@@ -27,6 +27,20 @@ a {
     padding-right: calc(50% - 600px);
 }
 
+.title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 78px;
+    text-align: left;
+}
+
+.text {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+}
+
 .header {
     height: 710px;
     background-image: url(images/bgheader.jpeg);
@@ -38,19 +52,11 @@ a {
     &__title {
         max-width: 769px;
         color: $color-text;
-        font-size: 4rem;
-        font-weight: 700;
-        line-height: 78px;
-        text-align: left;
         margin-bottom: 24px;
     }
 
     &__text {
         color: $color-text;
-        font-size: 1.5rem;
-        font-weight: 400;
-        line-height: 32px;
-        text-align: left;
         margin-bottom: 48px;
     }
 
@@ -70,26 +76,106 @@ a {
     }
 }
 
-// .scroll-bar {
-//     width: 3220px;
-//     height: 90px;
-//     display: flex;
-//     background-color: $background-color;
+.scroll-bar {
+    width: 3220px;
+    background-color: $background-color;
+    padding-top: 30px;
+    padding-bottom: 30px;
     
    
-//     &__content {
-//     display: flex;
-//     gap: 51px;
-//     align-items: center;
-//    }
+    &__content {
+    display: flex;
+    gap: 51px;
+    align-items: center;
+    overflow-x: hidden;
+   }
 
-//    &__heading {
-//     color: $color-text;
-//     font-size: 30px;
-//     font-weight: 700;
-//     line-height: 110%;
-//     text-align: left;
-//     text-transform: uppercase;
+   &__heading {
+    color: $color-text;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 110%;
+    text-align: left;
+    text-transform: uppercase;
 
-//    }
-// } здесь добавиться JS
+   }
+}
+.about-games {
+    padding-top: 94px;
+    background-color: rgb(32, 32, 39);
+    padding-bottom: 50px;
+
+    &__title {
+        color: $alt-color-text;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        color: $alt-color-text;
+        margin-bottom: 72px;
+    }
+}
+.about {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+
+    &__link {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__item {
+        grid-column: span 4;
+        border-radius: 30px;
+        box-shadow: 0px 12px 42px -8px rgba(0, 0, 0, 0.13);
+        background: rgb(255, 255, 255);
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &:hover {
+            transform: translateY(16px);
+            
+        }
+    }
+
+    &__img {
+
+        width: 100%;
+        height: auto;
+        border-radius: 30px;
+    
+    }
+
+    &__info {
+        display: flex;
+        gap: 26px;
+        flex-direction: column;
+        padding: 32px;
+    }
+
+    &__text {
+        color: $color-text;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 108px;
+        height: 36px;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 110%;
+        text-align: left;
+        border-radius: 52px;
+        background: rgb(247, 247, 247);
+    }
+
+    &__heading {
+        color: $color-text;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 39px;
+        text-align: left;
+    }
+}
