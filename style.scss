@@ -11,25 +11,3 @@ body {
 a {
     text-decoration: none;
 }
-
-.center {
-    padding-left: calc(50% - 600px);
-    padding-right: calc(50% - 600px);
-}
-
-.top {
-    position: relative;
-    height: 800px;
-    background-image: url(images/bgheader.jpeg);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: cover;
-}
-
-.header {
-    padding-top: 196px;
-
-    &__title {
-    max-width: 769px;
-    }
-}
