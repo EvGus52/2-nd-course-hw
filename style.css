@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Lato";
 }
 
 a {
@@ -40,7 +40,7 @@ a {
   height: 710px;
   background-color: rgb(225, 255, 143);
   background-image: url(images/bgstarLeft.png), url(images/bgstarRight.png), url(images/bgstarBig.svg);
-  background-position: 63px 69px, calc(100% - 344px) calc(100% - 149px), 240% -335px;
+  background-position: 63px 69px, calc(100% - 344px) calc(100% - 149px), top -333px right -488px;
   background-repeat: no-repeat;
   padding-top: 196px;
 }
@@ -113,8 +113,9 @@ a {
 .about {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr 0 1fr;
-  gap: 32px;
+  grid-template-rows: auto;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
 }
 .about__link {
   height: 100%;
@@ -134,21 +135,24 @@ a {
   transform: scale(1.05);
 }
 .about__item_1 {
-  grid-row: 1/2;
+  height: 473px;
 }
 .about__item_2 {
-  grid-row: 1/3;
+  height: 512px;
 }
 .about__item_3 {
-  grid-row: 1/2;
+  height: 473px;
 }
 .about__item_4 {
+  height: 551px;
   grid-row: 2/4;
 }
 .about__item_5 {
+  height: 512px;
   grid-row: 3/4;
 }
 .about__item_6 {
+  height: 551px;
   grid-row: 2/4;
 }
 .about__img {
