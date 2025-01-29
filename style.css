@@ -194,6 +194,11 @@ a {
     padding-left: 16px;
     padding-right: 16px;
   }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .header__text {
     width: 296px;
   }
