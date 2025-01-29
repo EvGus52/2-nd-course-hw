@@ -1,0 +1,216 @@
+$color-text: rgb(32, 32, 39);
+$alt-color-text: rgb(255, 255, 255);
+$background-color: rgb(188, 236, 48);
+$scale: scale(1.05);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Montserrat", 'Lato';
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 78px;
+    text-align: left;
+}
+
+.text {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+}
+
+.header {
+    height: 710px;
+    background-color: rgb(225, 255, 143);
+    background-image: url(images/bgstarLeft.png), url(images/bgstarRight.png), url(images/bgstarBig.svg);
+    background-position: 63px 69px, calc(100% - 344px) calc(100% - 149px), top -333px right -488px;
+    background-repeat: no-repeat;
+    padding-top: 196px;
+
+    &__title {
+        max-width: 769px;
+        color: $color-text;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        color: $color-text;
+        margin-bottom: 48px;
+    }
+
+    &__link {
+        display: inline-block;
+        width: 247px;
+        color: $alt-color-text;
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 141.69%;
+        text-align: center;
+        border: 1px solid rgb(32, 32, 39);
+        border-radius: 60px;
+        background: rgb(32, 32, 39);
+        padding: 16px 28px;
+        transition: transform 0.5s ease;
+        
+        &:hover {
+            background: white;
+            color: $color-text;
+            transform: $scale;
+        }
+    }
+}
+
+.scroll-bar {
+    width: 3220px;
+    background-color: $background-color;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+   
+    &__content {
+    display: flex;
+    gap: 51px;
+    align-items: center;
+   }
+
+   &__heading {
+    color: $color-text;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 110%;
+    text-align: left;
+    text-transform: uppercase;
+
+   }
+}
+.about-games {
+    padding-top: 94px;
+    background-color: rgb(32, 32, 39);
+    background-image: url(images/StarGL.png), url(images/StarGR.svg);
+    background-position: calc(50% - 660px) calc(50% + 110px), calc(100% + 120px) calc(50% - 360px);
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+
+    &__title {
+        color: $alt-color-text;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        color: $alt-color-text;
+        margin-bottom: 72px;
+    }
+}
+.about {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    column-gap: 32px;
+
+    &__link {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__item {
+        grid-column: span 4;
+        border-radius: 30px;
+        box-shadow: 0px 12px 42px -8px rgba(0, 0, 0, 0.13);
+        background: rgb(255, 255, 255);
+        transition: transform 0.5s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &:hover {
+            transform: $scale;
+        }
+
+        &_1 {
+            height: 473px;
+        }
+
+        &_2 {
+            height: 512px;
+        }
+
+        &_3 {
+            height: 473px;
+        }
+
+        &_4 {
+            height: 551px;
+            grid-row: 2 / 4;
+        }
+        
+        &_5 {
+            height: 512px;
+            grid-row: 3 / 4;
+        }
+
+        &_6 {
+            height: 551px;
+            grid-row: 2 / 4;
+        }
+    }
+
+    &__img {
+
+        width: 100%;
+        height: auto;
+        border-radius: 30px;
+    
+    }
+
+    &__info {
+        display: flex;
+        gap: 26px;
+        flex-direction: column;
+        padding: 32px;
+    }
+
+    &__text {
+        color: $color-text;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 108px;
+        height: 36px;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 110%;
+        text-align: left;
+        border-radius: 52px;
+        background: rgb(247, 247, 247);
+    }
+
+    &__heading {
+        color: $color-text;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 39px;
+        text-align: left;
+    }
+}
