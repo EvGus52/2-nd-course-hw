@@ -50,6 +50,7 @@ a {
   margin-bottom: 24px;
 }
 .header__text {
+  width: 720px;
   color: rgb(32, 32, 39);
   margin-bottom: 48px;
 }
@@ -186,4 +187,33 @@ a {
   font-weight: 700;
   line-height: 39px;
   text-align: left;
+}
+
+@media (max-width: 765px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header__text {
+    width: 296px;
+  }
+  .header__link {
+    width: 285px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .title {
+    font-size: 2.5rem;
+    line-height: 49px;
+    text-align: center;
+  }
+  .text {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+  }
+  .about-games {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
