@@ -85,9 +85,10 @@ a {
 
 .scroll-bar {
     width: 3220px;
+    height: 90px;
     background-color: $background-color;
     padding-top: 30px;
-    padding-bottom: 30px;
+    
     
    
     &__content {
@@ -103,7 +104,10 @@ a {
     line-height: 110%;
     text-align: left;
     text-transform: uppercase;
+   }
 
+   &__img_mob {
+    display: none;
    }
 }
 .about-games {

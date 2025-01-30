@@ -5,12 +5,17 @@
     }
 
     .header {
+        height: 649px;
         display: flex;
         flex-direction: column;
         align-items: center;
-
+        padding-top: 147px;
+        background-image: url(images/starMob.svg), url(images/starMobTop.png), url(images/starMobBot.png);
+        background-position: calc(200% - 40px) calc(100% - 490px), 37px 64px, calc(100% - 34px) calc(100% - 28px);
         &__text {
             width: 296px;
+            margin-bottom: 36px;
+            
         }
 
         &__link {
@@ -30,6 +35,30 @@
         font-weight: 400;
         line-height: 20px;
         text-align: center;
+    }
+
+    .scroll-bar {
+        width: 1713px;
+        padding-top: 16px;
+        height: 51px;
+        overflow-x: hidden;
+        &__content {
+            gap: 27px;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        &__heading {
+            font-size: 16px;
+        }
+
+        &__img {
+            display: none;
+
+            &_mob {
+                display: block;
+            }
+        }
     }
 
     .about-games {
