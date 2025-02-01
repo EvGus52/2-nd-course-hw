@@ -36,6 +36,26 @@ a {
   text-align: left;
 }
 
+.link {
+  display: inline-block;
+  width: 247px;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 141.69%;
+  text-align: center;
+  border: 1px solid rgb(32, 32, 39);
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  padding: 16px 28px;
+  transition: transform 0.5s ease;
+}
+.link:hover {
+  background: white;
+  color: rgb(32, 32, 39);
+  transform: scale(1.05);
+}
+
 .header {
   height: 710px;
   background-color: rgb(225, 255, 143);
@@ -52,25 +72,6 @@ a {
 .header__text {
   color: rgb(32, 32, 39);
   margin-bottom: 48px;
-}
-.header__link {
-  display: inline-block;
-  width: 247px;
-  color: rgb(255, 255, 255);
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 141.69%;
-  text-align: center;
-  border: 1px solid rgb(32, 32, 39);
-  border-radius: 60px;
-  background: rgb(32, 32, 39);
-  padding: 16px 28px;
-  transition: transform 0.5s ease;
-}
-.header__link:hover {
-  background: white;
-  color: rgb(32, 32, 39);
-  transform: scale(1.05);
 }
 
 .scroll-bar {
@@ -186,4 +187,61 @@ a {
   font-weight: 700;
   line-height: 39px;
   text-align: left;
+}
+
+.mini-games {
+  background-color: rgb(32, 32, 39);
+}
+.mini-games__title {
+  color: rgb(255, 255, 255);
+  padding-top: 46px;
+  margin-bottom: 72px;
+}
+
+.games-conteiner {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+}
+.games-conteiner__item {
+  grid-column: span 12;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 30px;
+  box-shadow: 0px 12px 42px -8px rgba(0, 0, 0, 0.13);
+  background: rgb(255, 255, 255);
+}
+.games-conteiner__item_reverse {
+  flex-direction: row-reverse;
+}
+.games-conteiner__img {
+  border-radius: 30px;
+  width: 600px;
+}
+.games-conteiner__info {
+  padding: 48px;
+}
+.games-conteiner__heading {
+  color: rgb(32, 32, 39);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 59px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+.games-conteiner__text {
+  margin-bottom: 36px;
+}
+
+.footer {
+  background-color: rgb(188, 236, 48);
+}
+.footer__text {
+  color: rgb(32, 32, 39);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 29px;
+  text-align: center;
+  padding-top: 61px;
+  padding-bottom: 60px;
 }/*# sourceMappingURL=style.css.map */
