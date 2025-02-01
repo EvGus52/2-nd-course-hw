@@ -57,13 +57,13 @@
 // alert (`Привет, ${userName}!`);
    
 //Доп. задание
-// let userNum = Number((prompt('Загадайте любое число')));
-// let a = userNum * 2;
-// alert (`Удвоенное загаданное число = ${a}`);
-// let b = a + 10;
-// alert (`Прибавляем 10 = ${b}`);
-// let c = b / 2;
-// alert (`Делим на 2 = ${c}`);
-// let result = c - userNum;
-// alert (result);
-// alert (`Ответ равен 5`);
+let userNum = Number(prompt('Загадайте любое число'));
+let a = userNum * 2;
+alert (`Удвоенное загаданное число = ${a}`);
+let b = a + 10;
+alert (`Прибавляем 10 = ${b}`);
+let c = b / 2;
+alert (`Делим на 2 = ${c}`);
+let result = c - userNum;
+alert (result);
+alert (`Ответ равен 5`);
