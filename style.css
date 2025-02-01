@@ -230,12 +230,10 @@ a {
     width: 1713px;
     padding-top: 16px;
     height: 51px;
-    overflow-x: hidden;
   }
   .scroll-bar__content {
     gap: 27px;
     align-items: center;
-    overflow-x: hidden;
   }
   .scroll-bar__heading {
     font-size: 16px;
