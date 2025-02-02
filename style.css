@@ -191,6 +191,10 @@ a {
 
 .mini-games {
   background-color: rgb(32, 32, 39);
+  padding-bottom: 144px;
+  background-image: url(images/starGamesUp.png), url(images/starGamesDown.png);
+  background-position: calc(100% - 88px) 88px, calc(100% - 96px) calc(100% - 56px);
+  background-repeat: no-repeat;
 }
 .mini-games__title {
   color: rgb(255, 255, 255);
