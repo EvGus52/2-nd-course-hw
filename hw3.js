@@ -23,7 +23,7 @@
 // alert(parseInt(a) + parseInt(b));
 
 //Задание № 5
-// let monthNumber = Number(prompt("Введите номер месяца"));
+// let monthNumber = 12;
 // switch (monthNumber) {
 //     case 12:
 //     console.log('Зима');
@@ -77,7 +77,7 @@
 // let clientOS = Number(prompt("Какое устройство вы используете (0 — iOS, 1 — Android"));
 // switch (clientOS) {
 //     case 0:
-//     alert('Установите версию приложения для iOS по ссылке');
+//     confirm('Установите версию приложения для iOS по ссылке');
 //         break;
 //     case 1:
 //     alert('Установите версию приложения для Android по ссылке');
