@@ -70,15 +70,16 @@ a {
   margin-bottom: 24px;
 }
 .header__text {
+  width: 720px;
   color: rgb(32, 32, 39);
   margin-bottom: 48px;
 }
 
 .scroll-bar {
   width: 3220px;
+  height: 90px;
   background-color: rgb(188, 236, 48);
   padding-top: 30px;
-  padding-bottom: 30px;
 }
 .scroll-bar__content {
   display: flex;
@@ -92,6 +93,9 @@ a {
   line-height: 110%;
   text-align: left;
   text-transform: uppercase;
+}
+.scroll-bar__img_mob {
+  display: none;
 }
 
 .about-games {
@@ -187,65 +191,4 @@ a {
   font-weight: 700;
   line-height: 39px;
   text-align: left;
-}
-
-.mini-games {
-  background-color: rgb(32, 32, 39);
-  padding-bottom: 144px;
-  background-image: url(images/starGamesUp.png), url(images/starGamesDown.png);
-  background-position: calc(100% - 88px) 88px, calc(100% - 96px) calc(100% - 56px);
-  background-repeat: no-repeat;
-}
-.mini-games__title {
-  color: rgb(255, 255, 255);
-  padding-top: 46px;
-  margin-bottom: 72px;
-}
-
-.games-conteiner {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 32px;
-}
-.games-conteiner__item {
-  grid-column: span 12;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 30px;
-  box-shadow: 0px 12px 42px -8px rgba(0, 0, 0, 0.13);
-  background: rgb(255, 255, 255);
-}
-.games-conteiner__item_reverse {
-  flex-direction: row-reverse;
-}
-.games-conteiner__img {
-  border-radius: 30px;
-  width: 600px;
-}
-.games-conteiner__info {
-  padding: 48px;
-}
-.games-conteiner__heading {
-  color: rgb(32, 32, 39);
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 59px;
-  text-align: left;
-  margin-bottom: 24px;
-}
-.games-conteiner__text {
-  margin-bottom: 36px;
-}
-
-.footer {
-  background-color: rgb(188, 236, 48);
-}
-.footer__text {
-  color: rgb(32, 32, 39);
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 29px;
-  text-align: center;
-  padding-top: 61px;
-  padding-bottom: 60px;
 }/*# sourceMappingURL=style.css.map */
