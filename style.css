@@ -36,7 +36,15 @@ a {
   text-align: left;
 }
 
-.link {
+.header {
+  height: 710px;
+  background-color: rgb(225, 255, 143);
+  background-image: url(images/bgstarLeft.png), url(images/bgstarRight.png), url(images/bgstarBig.svg);
+  background-position: 63px 69px, calc(100% - 344px) calc(100% - 149px), top -333px right -488px;
+  background-repeat: no-repeat;
+  padding-top: 196px;
+}
+.header__link {
   display: inline-block;
   width: 247px;
   color: rgb(255, 255, 255);
@@ -50,19 +58,10 @@ a {
   padding: 16px 28px;
   transition: transform 0.5s ease;
 }
-.link:hover {
+.header__link:hover {
   background: white;
   color: rgb(32, 32, 39);
   transform: scale(1.05);
-}
-
-.header {
-  height: 710px;
-  background-color: rgb(225, 255, 143);
-  background-image: url(images/bgstarLeft.png), url(images/bgstarRight.png), url(images/bgstarBig.svg);
-  background-position: 63px 69px, calc(100% - 344px) calc(100% - 149px), top -333px right -488px;
-  background-repeat: no-repeat;
-  padding-top: 196px;
 }
 .header__title {
   max-width: 769px;
@@ -239,6 +238,25 @@ a {
 }
 .games-conteiner__text {
   margin-bottom: 36px;
+}
+.games-conteiner__btn {
+  width: 247px;
+  color: rgb(255, 255, 255);
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 141.69%;
+  text-align: center;
+  border: 1px solid rgb(32, 32, 39);
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  padding: 16px 28px;
+  transition: transform 0.5s ease;
+}
+.games-conteiner__btn:hover {
+  background: white;
+  color: rgb(32, 32, 39);
+  transform: scale(1.05);
 }
 
 .footer {
