@@ -41,6 +41,8 @@ a {
     text-align: left;
 }
 
+
+
 .header {
     height: 710px;
     background-color: rgb(225, 255, 143);
@@ -48,18 +50,6 @@ a {
     background-position: 63px 69px, calc(100% - 344px) calc(100% - 149px), top -333px right -488px;
     background-repeat: no-repeat;
     padding-top: 196px;
-
-    &__title {
-        max-width: 769px;
-        color: $color-text;
-        margin-bottom: 24px;
-    }
-
-    &__text {
-        width: 720px;
-        color: $color-text;
-        margin-bottom: 48px;
-    }
 
     &__link {
         display: inline-block;
@@ -80,6 +70,18 @@ a {
             color: $color-text;
             transform: $scale;
         }
+    }
+
+    &__title {
+        max-width: 769px;
+        color: $color-text;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        width: 720px;
+        color: $color-text;
+        margin-bottom: 48px;
     }
 }
 
@@ -219,5 +221,92 @@ a {
         text-align: left;
     }
 }
+.mini-games {
+    background-color: rgb(32, 32, 39);
+    padding-bottom: 144px;
+    background-image: url(images/starGamesUp.png), url(images/starGamesDown.png);
+    background-position: calc(100% - 88px) 88px, calc(100% - 96px) calc(100% - 56px);
+    background-repeat: no-repeat;
+    
+    &__title {
+        color: $alt-color-text;
+        padding-top: 46px;
+        margin-bottom: 72px;
+    }
+}
 
-@import "mobile";
+.games-conteiner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+
+    &__item {
+        grid-column: span 12;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 30px;
+        box-shadow: 0px 12px 42px -8px rgba(0, 0, 0, 0.13);
+        background: rgb(255, 255, 255);
+
+        &_reverse {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__img {
+        border-radius: 30px;
+        width: 600px;
+    }
+
+    &__info {
+        padding: 48px;
+    }
+
+    &__heading {
+        color: $color-text;
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 59px;
+        text-align: left;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        margin-bottom: 36px;
+    }
+
+    &__btn {
+        width: 247px;
+        color: $alt-color-text;
+        font-family: inherit;
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 141.69%;
+        text-align: center;
+        border: 1px solid rgb(32, 32, 39);
+        border-radius: 60px;
+        background: rgb(32, 32, 39);
+        padding: 16px 28px;
+        transition: transform 0.5s ease;
+
+        &:hover {
+            background: white;
+            color: $color-text;
+            transform: $scale;
+        }
+    }
+}
+
+.footer {
+    background-color: $background-color;
+
+    &__text {
+        color: $color-text;
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 29px;
+        text-align: center;
+        padding-top: 61px;
+        padding-bottom: 60px;
+    }
+}
