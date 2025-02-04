@@ -49,3 +49,44 @@
 //         }
 //     console.log("Результат вычитания: ", k);
 //     console.log("Количество итераций: ", iterations);
+
+//Задание № 2
+// for (let monthNumber = 1; monthNumber <= 12; monthNumber++) {
+//     if (monthNumber === 1) 
+//    {
+//     console.log(`${monthNumber}-й месяц это Январь`);
+//     } else if (monthNumber === 2) {
+//         console.log(`${monthNumber}-й месяц это Февраль`);
+//     } else if (monthNumber === 3) {
+//         console.log(`${monthNumber}-й месяц это Март`);
+//     } else if (monthNumber === 4) {
+//         console.log(`${monthNumber}-й месяц это Апрель`);
+//     } else if (monthNumber === 5) {
+//         console.log(`${monthNumber}-й месяц это Май`);
+//     } else if (monthNumber === 6) {
+//         console.log(`${monthNumber}-й месяц это Июнь`);
+//     } else if (monthNumber === 7) {
+//         console.log(`${monthNumber}-й месяц это Июль`);
+//     } else if (monthNumber === 8) {
+//         console.log(`${monthNumber}-й месяц это Август`);
+//     } else if (monthNumber === 9) {
+//         console.log(`${monthNumber}-й месяц это Сентябрь`);
+//     } else if (monthNumber === 10) {
+//         console.log(`${monthNumber}-й месяц это Октябрь`);
+//     } else if (monthNumber === 11) {
+//         console.log(`${monthNumber}-й месяц это Ноябрь`);
+//     } else if (monthNumber === 12) {
+//         console.log(`${monthNumber}-й месяц это Декабрь`);
+//     }
+// }
+
+//Задание № 3
+// const book = {
+//         "название" : '«Преступление и наказание',
+//         "автор" : 'Фёдор Михайлович Достоевский',
+//         "год издания" : '1866',
+//         "жанр" : 'роман '
+//         }
+//         for (let key in book) {
+//         console.log(`${key}: ${book[key]}`);
+//         }
