@@ -64,5 +64,59 @@
         display: none;
     }
 
-    
+    .mini-games {
+        padding-bottom: 52px;
+        background-image: none;
+
+        &__title {
+            text-align: left;
+            margin-bottom: 48px;
+        }
+    }
+    .games-conteiner {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+
+        &__item {
+        grid-column: span 4;
+        flex-direction: column;
+        
+        }
+
+        &__img {
+        width: 100%;
+        }
+
+        &__info {
+            padding: 32px;
+        }
+
+        &__heading {
+        font-size: 2rem;
+        line-height: 39px;
+        margin-bottom: 16px;
+        }
+
+        &__text {
+            text-align: left;
+            margin-bottom: 32px;
+        }
+
+        &__btn {
+            max-width: 285px;
+            width: 100%;
+            font-size: 1rem;
+        }
+    }
+
+    .footer {
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        &__text {
+            font-size: 1rem;
+            line-height: 20px;
+            text-align: center;
+        }
+    }
 }
