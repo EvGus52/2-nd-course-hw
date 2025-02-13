@@ -10,6 +10,7 @@ html {
 
 body {
   font-family: "Montserrat", "Lato";
+  overflow-x: hidden;
 }
 
 a {
@@ -261,6 +262,8 @@ a {
 
 .footer {
   background-color: rgb(188, 236, 48);
+  padding-top: 61px;
+  padding-bottom: 60px;
 }
 .footer__text {
   color: rgb(32, 32, 39);
@@ -268,6 +271,106 @@ a {
   font-weight: 600;
   line-height: 29px;
   text-align: center;
-  padding-top: 61px;
-  padding-bottom: 60px;
+}
+
+@media (max-width: 765px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header {
+    height: 649px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 147px;
+    background-image: url(images/starMob.svg), url(images/starMobTop.png), url(images/starMobBot.png);
+    background-position: calc(200% - 40px) calc(100% - 490px), 37px 64px, calc(100% - 34px) calc(100% - 28px);
+  }
+  .header__text {
+    width: 296px;
+    margin-bottom: 36px;
+  }
+  .header__link {
+    width: 285px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .title {
+    font-size: 2.5rem;
+    line-height: 49px;
+    text-align: center;
+  }
+  .text {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+  }
+  .scroll-bar {
+    width: 1713px;
+    padding-top: 16px;
+    height: 51px;
+  }
+  .scroll-bar__content {
+    gap: 27px;
+    align-items: center;
+  }
+  .scroll-bar__heading {
+    font-size: 16px;
+  }
+  .scroll-bar__img {
+    display: none;
+  }
+  .scroll-bar__img_mob {
+    display: block;
+  }
+  .about-games {
+    display: none;
+  }
+  .mini-games {
+    padding-bottom: 52px;
+    background-image: none;
+  }
+  .mini-games__title {
+    text-align: left;
+    margin-bottom: 48px;
+  }
+  .games-conteiner {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .games-conteiner__item {
+    grid-column: span 4;
+    flex-direction: column;
+  }
+  .games-conteiner__img {
+    width: 100%;
+  }
+  .games-conteiner__info {
+    padding: 32px;
+  }
+  .games-conteiner__heading {
+    font-size: 2rem;
+    line-height: 39px;
+    margin-bottom: 16px;
+  }
+  .games-conteiner__text {
+    text-align: left;
+    margin-bottom: 32px;
+  }
+  .games-conteiner__btn {
+    max-width: 285px;
+    width: 100%;
+    font-size: 1rem;
+  }
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .footer__text {
+    font-size: 1rem;
+    line-height: 20px;
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */
