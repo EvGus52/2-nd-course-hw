@@ -1,3 +1,32 @@
+// Задание игра для сайта («Угадай число»)
+
+const randomNumber = Math.floor(Math.random() * 100) + 1;
+
+function guessNumber() {
+    let userGuess = 0;
+    let attempts = 0;
+
+    while (true) {
+        userGuess = prompt('Угадайте число от 1 до 100:');
+
+        if (isNaN(userGuess)) {
+            alert(`Пожалуйста, введите число!`);
+            continue;
+        }
+
+        attempts++;
+
+        if (userGuess < randomNumber) {
+            alert(`Загаданное число больше.`);
+        } else if (userGuess > randomNumber) {
+            alert(`Загаданное число меньше.`);
+        } else {
+            alert(`Поздравляю! Вы угадали число за ${attempts} попыток.`);
+            break;
+        }
+    }
+}
+
 // Задание 1
 
 // function minNumber(a, b) {
@@ -65,3 +94,4 @@
 // console.log(`Результат умножения: ${result}`);
 
 // Задание 6
+
