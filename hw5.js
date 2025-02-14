@@ -1,19 +1,16 @@
 // Задание игра для сайта («Угадай число»)
 
 const randomNumber = Math.floor(Math.random() * 100) + 1;
-
 function guessNumber() {
     let userGuess = 0;
     let attempts = 0;
-
+    
     while (true) {
         userGuess = prompt('Угадайте число от 1 до 100:');
-
         if (isNaN(userGuess)) {
             alert(`Пожалуйста, введите число!`);
             continue;
         }
-
         attempts++;
 
         if (userGuess < randomNumber) {
@@ -95,3 +92,50 @@ function guessNumber() {
 
 // Задание 6
 
+// function cubeNum() {
+//     let userNum = prompt('Введите число');
+//     if (isNaN(userNum)) {
+//         return `Переданный параметр не является числом`;
+//     } else {
+//         let result = userNum ** 3;
+//         return `${userNum} в кубе равняется ${result}`;
+//     }
+// }
+    
+// let result = cubeNum();
+// console.log(result);
+
+// Задание 7
+
+const circle1 = {
+    radius: 5,
+
+    // Метод для вычисления площади круга
+    getArea() {
+        return Math.PI * Math.pow(this.radius, 2);
+    },
+
+    // Метод для вычисления периметра окружности
+    getPerimeter() {
+        return 2 * Math.PI * this.radius;
+    }
+};
+
+const circle2 = {
+    radius: 10,
+
+    // Метод для вычисления площади круга
+    getArea() {
+        return Math.PI * Math.pow(this.radius, 2);
+    },
+
+    // Метод для вычисления периметра окружности
+    getPerimeter() {
+        return 2 * Math.PI * this.radius;
+    }
+};
+
+console.log(circle1.getArea());
+console.log(circle1.getPerimeter()); 
+console.log(circle2.getArea()); 
+console.log(circle2.getPerimeter());
