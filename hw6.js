@@ -1,4 +1,60 @@
+// Игра № 2 Простая арифметика
+// Функция для генерации случайного числа в заданном диапазоне
+function randomNum(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
+// Функция для генерации случайной арифметической задачи
+function mathPloblem() {
+    const operators = ['+', '-', '*', '/'];
+    const operator = operators[randomNum(0, operators.length - 1)];
+    let num1, num2;
+
+    
+    if (operator === '+') {
+        num1 = randomNum(1, 10);
+        num2 = randomNum(1, 10);
+    } else if (operator === '-') {
+        num1 = randomNum(1, 10);
+        num2 = randomNum(1, num1); // Чтобы результат был положительным
+    } else if (operator === '*') {
+        num1 = randomNum(1, 10);
+        num2 = randomNum(1, 10);
+    } else if (operator === '/') {
+        num2 = randomNum(1, 10);
+        num1 = num2 * randomNum(1, 10); // Чтобы результат был целым числом
+    }
+
+    return { num1, num2, operator };
+}
+
+function calculateAnswer(num1, num2, operator) {
+    switch (operator) {
+        case '+':
+            return num1 + num2;
+        case '-':
+            return num1 - num2;
+        case '*':
+            return num1 * num2;
+        case '/':
+            return num1 / num2;
+        default:
+            return null;
+    }
+}
+
+function simpleArithmetic() {
+    const problem = mathPloblem();
+    const { num1, num2, operator } = problem;
+    const correctAnswer = calculateAnswer(num1, num2, operator);
+    const userAnswer = parseFloat(prompt(`Решите задачу: ${num1} ${operator} ${num2} = ?`));
+
+    if (userAnswer === correctAnswer) {
+        alert('Правильно!');
+    } else {
+        alert(`Ошибка! Правильный ответ: ${correctAnswer}`);
+    }
+}
 
 // Задание 1
 
