@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading_hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Привет друг!</h1>
+    <button id="btn-hide">скрыть/показать приветствие</button>
+   <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore, laborum.</p>
+   <button id="btn-color">Изменить цвет текста</button>
+   <h1 class="heading-hello">Здравствуйте!</h1>
+   <button id="btn-change">Изменить текст</button>
+   <h1 class="description">Lorem ipsum dolor sit amet.</h1>
+   <h2 class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quia!</h2>
+   <h1 class="description">Lorem, ipsum dolor.</h1>
+   <p class="descr">Lorem ipsum dolor sit amet consectetur.</p>
+   <p class="descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quia!</p>
+   <p class="descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam voluptates tenetur architecto.</p>
+   <p class="descrip">Lorem, ipsum dolor.</p>
+   <button id="btn-create">Добавить элемент</button>
+   <ul>
+    <li class="list">Первый</li>
+    <li class="list">Второй</li>
+    <li class="list">Третий</li>
+    <li class="list">Четвертый</li>
+    <li class="list">Пятый</li>
+   </ul>
+   <button id="btn-del">Удалить первый элемент</button>
+    <script>
+        // Задание № 1
+        const headingEl = document.querySelector('.heading');
+        const btnHideEl = document.querySelector('#btn-hide');
+        btnHideEl.addEventListener('click', function() {
+            headingEl.classList.toggle('heading_hide');
+        })
+        // Задание № 2
+        const textEl = document.querySelector('.text');
+        const btnColorEl = document.querySelector('#btn-color');
+        btnColorEl.addEventListener('click', function() {
+            textEl.style.color = 'blue';
+        })
+        // Задание № 3
+        const headingHelloEl = document.querySelector('.heading-hello');
+        const btnChangeEl = document.querySelector('#btn-change');
+        btnChangeEl.addEventListener('click', function() {
+            headingHelloEl.textContent =  'Привет мир!';
+        })
+        // Задание № 4
+        const allDescriptions = document.querySelectorAll('.description')
+        allDescriptions.forEach(description => {
+            description.textContent = 'Измененный текст';
+        });
+         // Задание № 5
+        const allDescrip = document.querySelectorAll('.descrip')
+        allDescrip.forEach(descrip => {
+            descrip.textContent = 'Новый текст';
+        });
+        // Задание № 6
+        const btnCreateEl = document.querySelector('#btn-create')
+        const newEl = document.createElement('p');
+        newEl.textContent = 'Новый абзац';
+        btnCreateEl.addEventListener('click', function() {
+            document.body.appendChild(newEl);
+        })
+        // Задание № 7
+        const firstList = document.querySelector('.list');
+        const firstListBtnDel = document.querySelector('#btn-del');
+        firstListBtnDel.addEventListener('click', function() {
+            firstList.remove();
+        })
+
+    </script>
+</body>
+</html>
