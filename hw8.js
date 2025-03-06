@@ -1,4 +1,52 @@
 
+// Игра № 5 «Камень, ножницы, бумага»
+
+function rockPaperScissors() {
+    
+    let userChoiceDigit = prompt('Выберите:\n1 - Камень\n2 - Ножницы\n3 - Бумага');
+    if (userChoiceDigit === null) {
+      console.log('Игра отменена.');
+      return;
+    }
+    while (!['1', '2', '3'].includes(userChoiceDigit)) {
+      userChoiceDigit = prompt('Некорректный выбор. Пожалуйста, выберите:\n1 - Камень\n2 - Ножницы\n3 - Бумага');
+      if (userChoiceDigit === null) {
+        console.log('Игра отменена.');
+        return;
+      }
+    }
+    const userChoice = convertDigitToChoice(userChoiceDigit);
+    const choices = ['Камень', 'Ножницы', 'Бумага'];
+    const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+  
+    let result;
+    if (userChoice === computerChoice) {
+      result = 'Ничья';
+    } else if (
+      (userChoice === 'Камень' && computerChoice === 'Ножницы') ||
+      (userChoice === 'Ножницы' && computerChoice === 'Бумага') ||
+      (userChoice === 'Бумага' && computerChoice === 'Камень')
+    ) {
+        result = 'Ты победил, молодец!';
+    } else {
+        result = 'Ты проиграл! Продолжай играть, у тебя все получится!';
+    }
+  
+    alert(`Результат: ${result}\n\nТы выбрал: ${userChoice}\n\nКомпьютер выбрал: ${computerChoice} `);
+    const playAgain = confirm('Поиграем еще?');
+    if (playAgain) {
+        rockPaperScissors();
+    } else {
+        console.log('Игра отменена.');
+        return;
+    }
+  }
+  
+  function convertDigitToChoice(digit) {
+    const choices = ['Камень', 'Ножницы', 'Бумага'];
+    return choices[digit - 1];
+  }
+
 // Задание 1
 
 // const people = [
