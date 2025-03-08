@@ -6,6 +6,7 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -59,10 +60,8 @@ a {
   padding: 16px 28px;
   transition: transform 0.5s ease;
 }
-.header__link:hover {
-  background: white;
-  color: rgb(32, 32, 39);
-  transform: scale(1.05);
+.header__link_mob {
+  display: none;
 }
 .header__title {
   max-width: 769px;
@@ -75,16 +74,28 @@ a {
   margin-bottom: 48px;
 }
 
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 .scroll-bar {
-  width: 3220px;
+  width: 100%;
   height: 90px;
   background-color: rgb(188, 236, 48);
-  padding-top: 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
 }
 .scroll-bar__content {
+  width: 100%;
   display: flex;
   gap: 51px;
-  align-items: center;
+  animation: scroll-left 10s linear infinite;
 }
 .scroll-bar__heading {
   color: rgb(32, 32, 39);
@@ -296,6 +307,12 @@ a {
     font-size: 1rem;
     text-align: center;
   }
+  .header__link_desk {
+    display: none;
+  }
+  .header__link_mob {
+    display: block;
+  }
   .title {
     font-size: 2.5rem;
     line-height: 49px;
@@ -308,13 +325,11 @@ a {
     text-align: center;
   }
   .scroll-bar {
-    width: 1713px;
-    padding-top: 16px;
     height: 51px;
   }
   .scroll-bar__content {
+    width: 400%;
     gap: 27px;
-    align-items: center;
   }
   .scroll-bar__heading {
     font-size: 16px;
@@ -372,5 +387,12 @@ a {
     font-size: 1rem;
     line-height: 20px;
     text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .header__link:hover {
+    background: white;
+    color: rgb(32, 32, 39);
+    transform: scale(1.05);
   }
 }/*# sourceMappingURL=style.css.map */

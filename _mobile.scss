@@ -12,6 +12,7 @@
         padding-top: 147px;
         background-image: url(images/starMob.svg), url(images/starMobTop.png), url(images/starMobBot.png);
         background-position: calc(200% - 40px) calc(100% - 490px), 37px 64px, calc(100% - 34px) calc(100% - 28px);
+        
         &__text {
             width: 296px;
             margin-bottom: 36px;
@@ -22,6 +23,14 @@
             width: 285px;
             font-size: 1rem;
             text-align: center;
+
+            &_desk {
+                display: none;
+            }
+
+            &_mob {
+                display: block;
+            }
         }
     }
     .title {
@@ -38,13 +47,12 @@
     }
 
     .scroll-bar {
-        width: 1713px;
-        padding-top: 16px;
+
         height: 51px;
 
         &__content {
+            width: 400%;
             gap: 27px;
-            align-items: center;
         }
 
         &__heading {
