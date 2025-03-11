@@ -7,6 +7,10 @@ function guessNumber() {
     
     while (true) {
         userGuess = prompt('Угадайте число от 1 до 100:');
+        if (userGuess === null) {
+            console.log('Игра отменена.');
+            return;
+        }
         if (isNaN(userGuess)) {
             alert(`Пожалуйста, введите число!`);
             continue;

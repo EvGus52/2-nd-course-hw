@@ -16,7 +16,6 @@ html {
 
 body {
     font-family: "Montserrat", 'Lato';
-    overflow-x: hidden;
 }
 
 a {
@@ -65,7 +64,6 @@ a {
         border-radius: 60px;
         background: rgb(32, 32, 39);
         padding: 16px 28px;
-        transition: transform 0.5s ease;
         
         &_mob {
             display: none;
@@ -85,10 +83,6 @@ a {
     }
 }
 
-// #games-go {
-//     display: none;
-// }
-
 @keyframes scroll-left {
     from {
       transform: translateX(0);
@@ -107,15 +101,11 @@ a {
     align-items: center;
     white-space: nowrap;
     
-    
-   
     &__content {
     width: 100%;
     display: flex;
     gap: 51px;
     animation: scroll-left 10s linear infinite;
-    
-    
    }
 
    &__heading {
@@ -131,8 +121,6 @@ a {
     display: none;
    }
 }
-
-
 
 .about-games {
     padding-top: 94px;
@@ -277,7 +265,7 @@ a {
 
     &__img {
         border-radius: 30px;
-        width: 600px;
+        max-width: 600px;
     }
 
     &__info {
@@ -309,13 +297,8 @@ a {
         border-radius: 60px;
         background: rgb(32, 32, 39);
         padding: 16px 28px;
-        transition: transform 0.5s ease;
 
-        &:hover {
-            background: white;
-            color: $color-text;
-            transform: $scale;
-        }
+
     }
 }
 
@@ -334,4 +317,5 @@ a {
 }
 
 @import 'mobile';
+@import 'tablet';
 @import 'deskhover';

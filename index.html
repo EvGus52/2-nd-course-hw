@@ -169,7 +169,7 @@
                 <div class="games-conteiner__info">
                     <h2 class="games-conteiner__heading">Генератор <br> случайных <br> цветов</h2>
                     <p class="games-conteiner__text text">Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
-                    <button class="games-conteiner__btn">Играть!</button>
+                    <button id="changeColorBtn" class="games-conteiner__btn">Играть!</button>
                 </div>
             </article>
         </div>
@@ -181,6 +181,23 @@
     <script src="hw6.js"></script>
     <script src="hw7.js"></script>
     <script src="hw8.js"></script>
+    <script>
+        const changeColorBtn = document.querySelector('#changeColorBtn');
+        const colorBlock = document.querySelector('#games-go');
+        function colorGeneratorGame() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        
+        changeColorBtn.addEventListener('click', () => {
+            const randomColor = colorGeneratorGame();
+            colorBlock.style.backgroundColor = randomColor;
+        });
+    </script>
 </body>
 
 </html>

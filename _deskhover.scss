@@ -1,9 +1,32 @@
 @media (min-width: 768px) {
 
-    .header__link:hover {
+    .header {
         
-        background: white;
-        color: $color-text;
-        transform: $scale;
+        &__link {
+
+        transition: transform 0.5s ease;
+
+        &:hover {
+        
+            background: rgb(255, 255, 255);
+            color: $color-text;
+            transform: $scale;
+            }
+        }
+   
+    }
+
+    .games-conteiner {
+
+        &__btn {
+    
+            transition: transform 0.5s ease;
+
+            &:hover {
+                background: white;
+                color: $color-text;
+                transform: $scale;
+            }
+        }
     }
 }

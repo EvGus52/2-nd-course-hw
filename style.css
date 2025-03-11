@@ -11,7 +11,6 @@ html {
 
 body {
   font-family: "Montserrat", "Lato";
-  overflow-x: hidden;
 }
 
 a {
@@ -58,7 +57,6 @@ a {
   border-radius: 60px;
   background: rgb(32, 32, 39);
   padding: 16px 28px;
-  transition: transform 0.5s ease;
 }
 .header__link_mob {
   display: none;
@@ -235,7 +233,7 @@ a {
 }
 .games-conteiner__img {
   border-radius: 30px;
-  width: 600px;
+  max-width: 600px;
 }
 .games-conteiner__info {
   padding: 48px;
@@ -263,12 +261,6 @@ a {
   border-radius: 60px;
   background: rgb(32, 32, 39);
   padding: 16px 28px;
-  transition: transform 0.5s ease;
-}
-.games-conteiner__btn:hover {
-  background: white;
-  color: rgb(32, 32, 39);
-  transform: scale(1.05);
 }
 
 .footer {
@@ -389,8 +381,41 @@ a {
     text-align: center;
   }
 }
+@media (min-width: 766px) and (max-width: 1024px) {
+  .center {
+    padding-left: calc(50% - 393px);
+    padding-right: calc(50% - 393px);
+  }
+  .games-conteiner {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .games-conteiner__item {
+    grid-column: 2/8;
+    display: flex;
+    flex-direction: column;
+  }
+  .about {
+    grid-template-columns: repeat(8, 1fr);
+    row-gap: 24px;
+  }
+  .about__item {
+    height: 100%;
+    grid-row: auto;
+  }
+}
 @media (min-width: 768px) {
+  .header__link {
+    transition: transform 0.5s ease;
+  }
   .header__link:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(32, 32, 39);
+    transform: scale(1.05);
+  }
+  .games-conteiner__btn {
+    transition: transform 0.5s ease;
+  }
+  .games-conteiner__btn:hover {
     background: white;
     color: rgb(32, 32, 39);
     transform: scale(1.05);
