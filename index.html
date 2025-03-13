@@ -15,9 +15,10 @@
     <header class="header center">
         <h1 class="header__title title">Добро пожаловать <br> на мой сайт мини-игр</h1>
         <p class="header__text text">Тебе предстоит пройти несколько увлекательных игр.<br> Если готов, нажимай <strong>«Поехали!»</strong> и <strong>приступай</strong>.</p>
-        <a href="#games-info" class="header__link">Поехали!</a>
+        <a href="#games-info" class="header__link header__link_desk">Поехали!</a>
+        <a href="#games-go" class="header__link header__link_mob">Поехали!</a>
     </header>
-    <!-- <section class="scroll-bar center">
+    <section class="scroll-bar">
         <div class="scroll-bar__content">
             <h3 class="scroll-bar__heading">Викторина</h3>
             <img src="images/Star.svg" alt="star" class="scroll-bar__img">
@@ -37,8 +38,27 @@
             <h3 class="scroll-bar__heading">Генератор случайных цветов</h3>
             <img src="images/Star.svg" alt="star" class="scroll-bar__img">
             <img src="images/StarScrMob.svg" class="scroll-bar__img_mob" alt="star">
+            <!-- дублирование -->
+            <h3 class="scroll-bar__heading">Викторина</h3>
+            <img src="images/Star.svg" alt="star" class="scroll-bar__img">
+            <img src="images/StarScrMob.svg" class="scroll-bar__img_mob" alt="star">
+            <h3 class="scroll-bar__heading">угадай число</h3>
+            <img src="images/Star.svg" alt="star" class="scroll-bar__img">
+            <img src="images/StarScrMob.svg" class="scroll-bar__img_mob" alt="star">
+            <h3 class="scroll-bar__heading">Переверни текст</h3>
+            <img src="images/Star.svg" alt="star" class="scroll-bar__img">
+            <img src="images/StarScrMob.svg" class="scroll-bar__img_mob" alt="star">
+            <h3 class="scroll-bar__heading">Простая арифметика</h3>
+            <img src="images/Star.svg" alt="star" class="scroll-bar__img">
+            <img src="images/StarScrMob.svg" class="scroll-bar__img_mob" alt="star">
+            <h3 class="scroll-bar__heading">Камень, ножницы, бумага</h3>
+            <img src="images/Star.svg" alt="star" class="scroll-bar__img">
+            <img src="images/StarScrMob.svg" class="scroll-bar__img_mob" alt="star">
+            <h3 class="scroll-bar__heading">Генератор случайных цветов</h3>
+            <img src="images/Star.svg" alt="star" class="scroll-bar__img">
+            <img src="images/StarScrMob.svg" class="scroll-bar__img_mob" alt="star">
         </div>
-    </section> -->
+    </section>
     <section id="games-info" class="about-games center">
         <h1 class="about-games__title title">Об играх</h1>
         <p class="about-games__text text">В моей коллекции представлено 6 игр на разные темы.<br>
@@ -101,7 +121,7 @@
             </article>
         </div>
     </section>
-    <section class="mini-games center">
+    <section id="games-go" class="mini-games center">
         <h1 class="mini-games__title title">Мини-игры</h1>
         <div class="games-conteiner">
             <article id="number" class="games-conteiner__item games-conteiner__item_reverse">
@@ -149,7 +169,7 @@
                 <div class="games-conteiner__info">
                     <h2 class="games-conteiner__heading">Генератор <br> случайных <br> цветов</h2>
                     <p class="games-conteiner__text text">Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
-                    <button class="games-conteiner__btn">Играть!</button>
+                    <button id="changeColorBtn" class="games-conteiner__btn">Играть!</button>
                 </div>
             </article>
         </div>
@@ -161,6 +181,23 @@
     <script src="hw6.js"></script>
     <script src="hw7.js"></script>
     <script src="hw8.js"></script>
+    <script>
+        const changeColorBtn = document.querySelector('#changeColorBtn');
+        const colorBlock = document.querySelector('#games-go');
+        function colorGeneratorGame() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        
+        changeColorBtn.addEventListener('click', () => {
+            const randomColor = colorGeneratorGame();
+            colorBlock.style.backgroundColor = randomColor;
+        });
+    </script>
 </body>
 
 </html>

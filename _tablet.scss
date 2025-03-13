@@ -1,0 +1,34 @@
+@media (min-width: 766px) and (max-width: 1024px) {
+   
+    .center {
+        padding-left: calc(50% - 393px);
+        padding-right: calc(50% - 393px);
+    }
+    
+    .games-conteiner {
+
+        grid-template-columns: repeat(8, 1fr);
+
+        &__item {
+            grid-column: 2 / 8;
+            display: flex;
+            flex-direction: column;
+            
+            
+
+        }
+    }
+
+    .about {
+        grid-template-columns: repeat(8, 1fr);
+        row-gap: 24px;
+       
+        
+         &__item {
+            height: 100%;
+            grid-row: auto;
+         }   
+            
+        }
+
+}

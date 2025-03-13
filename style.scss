@@ -11,11 +11,11 @@ $scale: scale(1.05);
 
 html {
     font-size: 16px;
+    scroll-behavior: smooth; 
 }
 
 body {
     font-family: "Montserrat", 'Lato';
-    overflow-x: hidden;
 }
 
 a {
@@ -64,12 +64,9 @@ a {
         border-radius: 60px;
         background: rgb(32, 32, 39);
         padding: 16px 28px;
-        transition: transform 0.5s ease;
         
-        &:hover {
-            background: white;
-            color: $color-text;
-            transform: $scale;
+        &_mob {
+            display: none;
         }
     }
 
@@ -86,18 +83,29 @@ a {
     }
 }
 
+@keyframes scroll-left {
+    from {
+      transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+  }
+  
 .scroll-bar {
-    width: 3220px;
+    width: 100%;
     height: 90px;
     background-color: $background-color;
-    padding-top: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
     
-    
-   
     &__content {
+    width: 100%;
     display: flex;
     gap: 51px;
-    align-items: center;
+    animation: scroll-left 10s linear infinite;
    }
 
    &__heading {
@@ -113,6 +121,7 @@ a {
     display: none;
    }
 }
+
 .about-games {
     padding-top: 94px;
     background-color: rgb(32, 32, 39);
@@ -256,7 +265,7 @@ a {
 
     &__img {
         border-radius: 30px;
-        width: 600px;
+        max-width: 600px;
     }
 
     &__info {
@@ -288,13 +297,8 @@ a {
         border-radius: 60px;
         background: rgb(32, 32, 39);
         padding: 16px 28px;
-        transition: transform 0.5s ease;
 
-        &:hover {
-            background: white;
-            color: $color-text;
-            transform: $scale;
-        }
+
     }
 }
 
@@ -313,3 +317,5 @@ a {
 }
 
 @import 'mobile';
+@import 'tablet';
+@import 'deskhover';
